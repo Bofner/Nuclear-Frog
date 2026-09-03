@@ -1,6 +1,4 @@
 # Nuclear Frog
-INSERT SCREENSHOT of full game
-
 Nuclear Frog is a "subpixel" game. The entire resolution of Nuclear Frog is 1x1 pixel, so how could anyone possibly play this?
 
 ## An entire ecosystem in a single pixel!
