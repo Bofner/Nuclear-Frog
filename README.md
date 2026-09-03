@@ -3,7 +3,7 @@ INSERT SCREENSHOT of full game
 
 Nuclear Frog is a "subpixel" game. The entire resolution of Nuclear Frog is 1x1 pixel, so how could anyone possibly play this?
 
-## An entire ecosystem in a single pixel
+## An entire ecosystem in a single pixel!
 ![](https://github.com/Bofner/Nuclear-Frog/blob/main/assets/ecosystem.gif)
 
 Magnification! If you zoom into your screen with a camera, especially one equipped with a macro lens, then you will be able to see not just the pixels on your screen, but the Red, Green and Blue subpixels that make up each pixel! These subpixels are where the entire world of Nuclear Frog take place!
@@ -36,9 +36,13 @@ INSERT GIF
 
 If you get caught by the fox, or you lose your radiation, then it's game over. When the game is over, your score will be displayed in binary by flashing the green subpixel for 1 and the blue sub pixel for 0. The maximum possible score is a single byte (8 bits) so make sure to write down your score on paper if you can't convert bytes to decimal in your head! 
 
-Here is an example of a score of ___ (%01101001)
+An example of a winning score of 223 (%11011111):
 
-INSERT SCORE GIF
+![](https://github.com/Bofner/Nuclear-Frog/blob/main/assets/win223.gif)
+
+An example of a losing score of 139139 (%10001011):
+
+![](https://github.com/Bofner/Nuclear-Frog/blob/main/assets/lose139.gif)
 
 ### NOTE
 Nuclear Frog was designed to be played on fixed-pixel RGB displays that have the standard RGB orientation. Nuclear Frog will likely not be displayed properly on non-fixed pixel displays like CRTs or display technologies that use a non-standard RGB layout. 
