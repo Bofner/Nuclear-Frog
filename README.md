@@ -39,3 +39,6 @@ If you get caught by the fox, or you lose your radiation, then it's game over. W
 Here is an example of a score of ___ (%01101001)
 
 INSERT SCORE GIF
+
+### NOTE
+Nuclear Frog was designed to be played on fixed-pixel RGB displays that have the standard RGB orientation. Nuclear Frog will likely not be displayed properly on non-fixed pixel displays like CRTs or display technologies that use a non-standard RGB layout. 
