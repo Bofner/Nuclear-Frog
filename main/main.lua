@@ -1,6 +1,6 @@
 -- Screen Variables
-local width = 160
-local height = 144
+local width = 256
+local height = 192
 
 -- Entity Files
 require("entities.nuclearFrog.nuclearFrog")
