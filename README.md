@@ -4,7 +4,7 @@ INSERT SCREENSHOT of full game
 Nuclear Frog is a "subpixel" game. The entire resolution of Nuclear Frog is 1x1 pixel, so how could anyone possibly play this?
 
 ## An entire ecosystem in a single pixel
-![](https://github.com/Bofner/Nuclear-Frog/blob/main/assets/nuclearFrog.png)
+![](https://github.com/Bofner/Nuclear-Frog/blob/main/assets/ecosystem.gif)
 
 Magnification! If you zoom into your screen with a camera, especially one equipped with a macro lens, then you will be able to see not just the pixels on your screen, but the Red, Green and Blue subpixels that make up each pixel! These subpixels are where the entire world of Nuclear Frog take place!
 
