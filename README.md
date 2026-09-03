@@ -40,7 +40,7 @@ An example of a winning score of 223 (%11011111):
 
 ![](https://github.com/Bofner/Nuclear-Frog/blob/main/assets/win223.gif)
 
-An example of a losing score of 139139 (%10001011):
+An example of a losing score of 139 (%10001011):
 
 ![](https://github.com/Bofner/Nuclear-Frog/blob/main/assets/lose139.gif)
 
