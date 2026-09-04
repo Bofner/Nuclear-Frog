@@ -2,7 +2,7 @@
 Nuclear Frog is a "subpixel" game. The entire resolution of Nuclear Frog is 1x1 pixel, so how could anyone possibly play this?
 
 ## An entire ecosystem in a single pixel!
-![](https://github.com/Bofner/Nuclear-Frog/blob/main/assets/ecosystem.gif)
+![](https://github.com/Bofner/Nuclear-Frog/blob/main/assets/nuclearFrog.png)
 
 Magnification! If you zoom into your screen with a camera, especially one equipped with a macro lens, then you will be able to see not just the pixels on your screen, but the Red, Green and Blue subpixels that make up each pixel! These subpixels are where the entire world of Nuclear Frog take place!
 
@@ -25,22 +25,22 @@ The red fox will wait for you to continue irradiating, and will wait if you hide
 
 When the red fox is at his most desperate, he will lunge out in a full blown strike (a quick intensity shift from 0 to 255)! Stay on your toes as you become more and more irradiated. 
 
-INSERT GIF
+![](https://github.com/Bofner/Nuclear-Frog/blob/main/assets/lunging.gif)
 
 ### What's a Nuclear Frog to do?
 Thankfully, you can avoid the hungry fox by diving into the blue (subpixel) pond! But don't stay too long, or else you'll love your radiation!
 
-INSERT GIF
+![](https://github.com/Bofner/Nuclear-Frog/blob/main/assets/redFoxDodge.png)
 
 If you get caught by the fox, or you lose your radiation, then it's game over. When the game is over, your score will be displayed in binary by flashing the green subpixel for 1 and the blue sub pixel for 0. The maximum possible score is a single byte (8 bits) so make sure to write down your score on paper if you can't convert bytes to decimal in your head! 
 
-An example of a winning score of 223 (%11011111):
+An example of a winning score of 199 (%1100011):
 
-![](https://github.com/Bofner/Nuclear-Frog/blob/main/assets/win223.gif)
+![](https://github.com/Bofner/Nuclear-Frog/blob/main/assets/win199.gif)
 
-An example of a losing score of 139 (%10001011):
+An example of a losing score of 148 (%10010100):
 
-![](https://github.com/Bofner/Nuclear-Frog/blob/main/assets/lose139.gif)
+![](https://github.com/Bofner/Nuclear-Frog/blob/main/assets/lose148.gif)
 
 ### NOTE
 Nuclear Frog was designed to be played on fixed-pixel RGB displays that have the standard RGB orientation. Nuclear Frog will likely not be displayed properly on non-fixed pixel displays like CRTs or display technologies that use a non-standard RGB layout. 
