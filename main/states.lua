@@ -17,7 +17,7 @@ local irradiating = false
 local maxIrradiation = 255       -- Constant
 local irradiationSpeed = 15      -- Constant
 local coolOffSpeed = 30          -- Constant
-local pondConstant = 50
+local pondConstant = 65
 
 local colorMaxBrightness = 255
 
@@ -61,7 +61,7 @@ function initializeNuclearFrog(dt)
     debug = "init"
     debugScore = score
     debugTime = playTime
-    debugBinScore = 0
+    binaryScore = 0
     debugDigit = 0
     Nuclear = nuclearPower
 
@@ -134,13 +134,15 @@ function updateGamePlay(dt)
 
     -- Check if the frog has fully irradiated
     if nuclearPower >= maxIrradiation then
-        timer = -1
         GameState = winState
+        blackTime = true            -- Give the player a moment before the score starts flashing
+        timer = 40
         nuclearVisibility = colorMaxBrightness
         calculateScore()
     elseif nuclearPower <= 0 then
-        timer = -1
         GameState = loseState
+        blackTime = true            -- Give the player a moment before the score starts flashing
+        timer = 40
         score = math.floor(score - 30)
         calculateScore()
     end
@@ -148,6 +150,8 @@ function updateGamePlay(dt)
         -- Check if the frog was eaten by the fox
     if irradiating and foxDistance >= colorMaxBrightness - 1 then
         GameState = loseState
+        blackTime = true            -- Give the player a moment before the score starts flashing
+        timer = 40
         nuclearVisibility = 0
         score = math.floor(score - 30)
         calculateScore()
@@ -164,6 +168,13 @@ function updateGamePlay(dt)
     return colorValues
 end
 
+--====================================================================
+-- Pre-score blanking
+--====================================================================
+-- Holds the screen black for a moment before displaying the score
+function preScoreBlanking(dt, digit)
+
+end
 
 --====================================================================
 -- Display score in binary
@@ -205,8 +216,8 @@ function screenTimer(dt)
 
     -- The digit we want to be showing
     if currentDisplayDigit < 9 then
-        debugDigit = string.sub(debugBinScore, currentDisplayDigit, currentDisplayDigit)
-        displayScore(dt, string.sub(debugBinScore, currentDisplayDigit, currentDisplayDigit))
+        debugDigit = string.sub(binaryScore, currentDisplayDigit, currentDisplayDigit)
+        displayScore(dt, string.sub(binaryScore, currentDisplayDigit, currentDisplayDigit))
     else 
         scoreDisplayed = true
     end
@@ -228,7 +239,7 @@ function calculateScore()
         else
            remainingValue = math.floor(remainingValue / 2)
         end
-        debugBinScore = string.format("%d",binValue)
+        binaryScore = string.format("%d",binValue)
 
         for i = 1, 7, 1 do 
             binValue = remainingValue % 2
@@ -237,7 +248,7 @@ function calculateScore()
             else
                 remainingValue = math.floor(remainingValue / 2)
             end
-            debugBinScore = string.format("%d",binValue) .. debugBinScore
+            binaryScore = string.format("%d",binValue) .. binaryScore
         end
 end
 
@@ -250,7 +261,7 @@ function winState(dt)
 
     debug = "Winner"
     
-    -- We want to screen to be pure green
+    -- We want to screen to start off black before showing the score
     foxDistance = 0
     nuclearVisibility = colorMaxBrightness
     pondBrightness = colorMaxBrightness
@@ -282,7 +293,7 @@ end
 function loseState(dt)
     debug = "Loser"
     
-    -- We want to screen to be pure red
+    -- We want to screen to start off black, then be pure red
     foxDistance = colorMaxBrightness
     nuclearVisibility = 0
     pondBrightness = 0
